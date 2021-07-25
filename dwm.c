@@ -1583,7 +1583,8 @@ run(void)
 
 void
 runAutostart(void) {
-	system("killall -q dwmblocks; dwmblocks &");
+	system("echo got path $PATH");
+	system("killall -q dwmblocks; dwmblocks >~/.cache/dwblocks.out 2>~/.cache/dwmblocks.err &");
 }
 
 void
